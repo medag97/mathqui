@@ -1,0 +1,32 @@
+name: mathquiz
+description: "A new Flutter project."
+publish_to: 'none'  # Prevents accidental publishing to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  vibration: ^1.8.4
+  fluttertoast: ^8.2.5
+  shared_preferences: ^2.0.0
+  sensors_plus: ^1.3.0
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  plugin:
+    platforms:
+      android:
+        package: dev.jeremyko.proximity_sensor
+        pluginClass: ProximitySensorPlugin
+      ios:
+        pluginClass: ProximitySensorPlugin
